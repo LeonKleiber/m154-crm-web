@@ -14,7 +14,7 @@ public class CrmApp {
 
 		Javalin app = Javalin.create();
 
-		app.config.addStaticFiles("public", Location.CLASSPATH);
+		app.config.addStaticFiles("/public", Location.CLASSPATH);
 
         app.routes(() -> {
         	get(Path.Web.CUSTOMERS, CustomerController.showIndex);
